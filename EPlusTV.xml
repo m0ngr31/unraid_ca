@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>EPlusTV</Name>
+  <Repository>m0ngr31/eplustv</Repository>
+  <Registry>https://hub.docker.com/r/m0ngr31/eplustv/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/m0ngr31/EPlusTV/issues</Support>
+  <Project/>
+  <Overview>This takes ESPN+ and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or VLC.&#xD;
+&#xD;
+=== Notes ===&#xD;
+ * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN+ app currently gives.&#xD;
+ * Currently this software is in a very beta state. It hasn't been fully tested and relies on some lame workarounds to get the data needed to start a stream. There are some questions about how boundies work when a scheduled entry ends or when a new entry starts if it will pick it up automatically.&#xD;
+ * The Mouse might not like it and it could be taken down at any minute. Enjoy it while it lasts. &#xAF;\\(&#x30C4;)/&#xAF;&#xD;
+</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://i.imgur.com/LrdVje2.png</Icon>
+  <ExtraParams>--ipc=host</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This takes ESPN+ and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or VLC.&#xD;
+&#xD;
+=== Notes ===&#xD;
+ * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN+ app currently gives.&#xD;
+ * Currently this software is in a very beta state. It hasn't been fully tested and relies on some lame workarounds to get the data needed to start a stream. There are some questions about how boundies work when a scheduled entry ends or when a new entry starts if it will pick it up automatically.&#xD;
+ * The Mouse might not like it and it could be taken down at any minute. Enjoy it while it lasts. &#xAF;\\(&#x30C4;)/&#xAF;&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/eplustv</HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/app/tmp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>ESPN_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ESPN_PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>ACCESS_URI</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>START_CHANNEL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="HTTP Port" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="App Config" Target="/app/config" Default="/mnt/user/appdata/eplustv" Mode="rw" Description="Container Path: /app/config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/eplustv</Config>
+  <Config Name="Temp Directory" Target="/app/tmp" Default="" Mode="rw" Description="Container Path: /app/tmp" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="ESPN+ Username" Target="ESPN_USER" Default="" Mode="" Description="Container Variable: ESPN_USER" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ESPN+ Password" Target="ESPN_PASS" Default="" Mode="" Description="Container Variable: ESPN_PASS" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="URL" Target="ACCESS_URI" Default="" Mode="" Description="URL that other sites can access this container at." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Start Channel" Target="START_CHANNEL" Default="" Mode="" Description="If nothing is input, it will default to Channel 1." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+</Container>

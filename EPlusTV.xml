@@ -59,10 +59,28 @@
       <Name>START_CHANNEL</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>720p60</Value>
+      <Name>STREAM_RESOLUTION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="HTTP Port" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
   <Config Name="App Config" Target="/app/config" Default="/mnt/user/appdata/eplustv" Mode="rw" Description="Container Path: /app/config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/eplustv</Config>
   <Config Name="Temp Directory" Target="/app/tmp" Default="" Mode="rw" Description="Container Path: /app/tmp" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="Start Channel" Target="START_CHANNEL" Default="" Mode="" Description="If nothing is input, it will default to Channel 1." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Stream Quality" Target="STREAM_RESOLUTION" Default="720p60" Mode="" Description="What stream resolution to use. Valid options are `720p60`, `720p`, and `540p` | No. If not set, `720p60` is the default." Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>

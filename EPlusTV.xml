@@ -9,10 +9,10 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/m0ngr31/EPlusTV/issues</Support>
   <Project/>
-  <Overview>This takes ESPN+ and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or VLC.&#xD;
+  <Overview>This takes ESPN+, ESPN, and FOX Sports events, and transforms them into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin, ChannelsDVR, or xTeVe.&#xD;
 &#xD;
 === Notes ===&#xD;
- * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN+ app currently gives.&#xD;
+ * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN and FOX Sports apps currently provide.&#xD;
  * There are some questions about how boundies work when a scheduled entry ends or when a new entry starts if it will pick it up automatically.&#xD;
  * The Mouse might not like it and it could be taken down at any minute. Enjoy it while it lasts. &#xAF;\\(&#x30C4;)/&#xAF;&#xD;
 </Overview>
@@ -24,11 +24,11 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>This takes ESPN+ and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or VLC.&#xD;
+  <Description>This takes ESPN+, ESPN, and FOX Sports events, and transforms them into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin, ChannelsDVR, or xTeVe.&#xD;
 &#xD;
 === Notes ===&#xD;
- * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN+ app currently gives.&#xD;
- * Currently this software is in a very beta state. It hasn't been fully tested and relies on some lame workarounds to get the data needed to start a stream. There are some questions about how boundies work when a scheduled entry ends or when a new entry starts if it will pick it up automatically.&#xD;
+ * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN and FOX Sports apps currently provide.&#xD;
+ * There are some questions about how boundies work when a scheduled entry ends or when a new entry starts if it will pick it up automatically.&#xD;
  * The Mouse might not like it and it could be taken down at any minute. Enjoy it while it lasts. &#xAF;\\(&#x30C4;)/&#xAF;&#xD;
 </Description>
   <Networking>
@@ -83,4 +83,17 @@
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="Start Channel" Target="START_CHANNEL" Default="" Mode="" Description="If nothing is input, it will default to Channel 1." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Stream Quality" Target="STREAM_RESOLUTION" Default="720p60" Mode="" Description="What stream resolution to use. Valid options are `720p60`, `720p`, and `540p` | No. If not set, `720p60` is the default." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use ESPN+?" Target="ESPNPLUS" Default="true" Mode="" Description="Set to false if you only want events that come from your TV provider" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use ESPN?" Target="ESPN" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use ESPN2?" Target="ESPN2" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use ESPN3?" Target="ESPN3" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use ESPNU?" Target="ESPNU" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use SEC Network?" Target="SEC" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use SEC Network+?" Target="SECPLUS" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use ACCN?" Target="ACCN" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use ACCNX?" Target="ACCNX" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use Longhorn Network?" Target="LONGHORN" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use FOX Sports?" Target="FOXSPORTS" Default="" Mode="" Description="FS1, FS2, BTN, FSP: Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Schedule FOX Sports replays?" Target="FOXSPORTS_ALLOW_REPLAYS" Default="" Mode="" Description="If you would like to schedule events that aren't live" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Maximum Resolution for FOX Sports" Target="FOXSPORTS_MAX_RESOLUTION" Default="720p" Mode="" Description="Max FOX Sports resolution to use. Valid options are `UHD/HDR`, `UHD/SDR`, and `720p`" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>

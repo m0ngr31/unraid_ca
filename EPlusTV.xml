@@ -9,10 +9,10 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/m0ngr31/EPlusTV/issues</Support>
   <Project/>
-  <Overview>This takes ESPN+, ESPN, FOX Sports, and NBC Sports events, and transforms them into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin, ChannelsDVR, or xTeVe.&#xD;
+  <Overview>This takes ESPN+, ESPN, FOX Sports, and MLB.tv events, and transforms them into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin, ChannelsDVR, or xTeVe.&#xD;
 &#xD;
 === Notes ===&#xD;
- * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN, FOX Sports, and NBC Sports apps currently provide.&#xD;
+ * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN, FOX Sports, and MLB.tv apps currently provide.&#xD;
  * The Mouse might not like it and it could be taken down at any minute. Enjoy it while it lasts. &#xAF;\\(&#x30C4;)/&#xAF;&#xD;
 </Overview>
   <Category/>
@@ -23,10 +23,10 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>This takes ESPN+, ESPN, FOX Sports, and NBC Sports events, and transforms them into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin, ChannelsDVR, or xTeVe.&#xD;
+  <Description>This takes ESPN+, ESPN, FOX Sports, and MLB.tv events, and transforms them into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin, ChannelsDVR, or xTeVe.&#xD;
 &#xD;
 === Notes ===&#xD;
- * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN FOX Sports, and NBC Sports apps currently provide.&#xD;
+ * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN FOX Sports, and MLB.tv apps currently provide.&#xD;
  * The Mouse might not like it and it could be taken down at any minute. Enjoy it while it lasts. &#xAF;\\(&#x30C4;)/&#xAF;&#xD;
 </Description>
   <Networking>
@@ -66,7 +66,8 @@
   <Config Name="Start Channel" Target="START_CHANNEL" Default="1" Mode="" Description="If nothing is input, it will default to Channel 1." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
   <Config Name="Max Stream Resolution" Target="MAX_RESOLUTION" Default="UHD/SDR" Mode="" Description="Max resolution to use. Valid options are `UHD/HDR`, `UHD/SDR`, `1080p`, `720p`, and `540p` (Some providers don't offer 4K or 1080p and will attempt to play the highest framerate available for selected resolution)." Type="Variable" Display="always" Required="false" Mask="false">UHD/SDR</Config>
   <Config Name="Number of Channels" Target="NUM_OF_CHANNELS" Default="150" Mode="" Description="How many channels to create? This is dependent on the networks you are using. A good number to start with is > 100 if you are using ESPN+." Type="Variable" Display="always" Required="false" Mask="false">150</Config>
-  <Config Name="Use Slate?" Target="USE_SLATE" Default="" Mode="" Description="Play a short video with text while event is loading. This doesn't work in all players so use with caution!" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Dedicated Linear Channels?" Target="USE_LINEAR" Default="" Mode="" Description="If you are using linear channels like ESPN, FS1, ect., and want those events on their own dedicated channels" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Proxy Segments?" Target="PROXY_SEGMENTS" Default="" Mode="" Description="Proxy keyed `*.ts` files" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use ESPN+?" Target="ESPNPLUS" Default="true" Mode="" Description="Set to false if you only want events that come from your TV provider" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Use ESPN?" Target="ESPN" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use ESPN2?" Target="ESPN2" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
@@ -79,5 +80,8 @@
   <Config Name="Use Longhorn Network?" Target="LONGHORN" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use FOX Sports?" Target="FOXSPORTS" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Schedule FOX Sports replays?" Target="FOXSPORTS_ALLOW_REPLAYS" Default="" Mode="" Description="If you would like to schedule events that aren't live" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use NBC Sports?" Target="NBCSPORTS" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use MLB.tv?" Target="MLBTV" Default="" Mode="" Description="Set if you would like to use MLB.tv" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MLB.tv Username" Target="MLBTV_USER" Default="" Mode="" Description="MLB.tv Username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MLB.tv Password" Target="MLBTV_PASS" Default="" Mode="" Description="MLB.tv Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Only free MLB.tv games?" Target="MLBTV_ONLY_FREE" Default="" Mode="" Description="Only schedule free games?" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>

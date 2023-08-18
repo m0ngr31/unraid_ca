@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OpenRA</Name>
+  <Repository>m0ngr31/openra:release</Repository>
+  <Registry>https://hub.docker.com/r/m0ngr31/openra</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/m0ngr31/OpenRA-server/issues</Support>
+  <Project>http://openra.net/</Project>
+  <Overview>OpenRA dedicated server&#xD;
+&#xD;
+&#xD;
+OpenRA is a project that recreates and modernizes the classic Command &amp;amp; Conquer real time strategy games. We have developed a flexible open source game engine (the OpenRA engine) that provides a common platform for rebuilding and reimagining classic 2D and 2.5D RTS games (the OpenRA mods). </Overview>
+  <Category>Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://i.imgur.com/XWuhQ2h.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Server Port" Target="1234" Default="1234" Mode="tcp" Description="Port that server listens on" Type="Port" Display="always" Required="true" Mask="false">1234</Config>
+  <Config Name="UDP" Target="1234" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="false" Mask="false">1234</Config>
+  <Config Name="Server Mod" Target="Mod" Default="ra" Mode="" Description="Game the server runs eg:- 'cnc', 'ra' or 'd2k'" Type="Variable" Display="always" Required="true" Mask="false">ra</Config>
+  <Config Name="ListenPort" Target="ListenPort" Default="1234" Mode="" Description="ListenPort for multiple servers " Type="Variable" Display="always" Required="true" Mask="false">1234</Config>
+  <Config Name="ExternalPort" Target="ExternalPort" Default="1234" Mode="" Description="ExternalPort for multiple servers" Type="Variable" Display="always" Required="true" Mask="false">1234</Config>
+  <Config Name="Server Name" Target="Name" Default="DEDICATED SERVER" Mode="" Description="Name of server to advertise" Type="Variable" Display="always" Required="true" Mask="false">SERVER NAME</Config>
+  <Config Name="Server Password" Target="Password" Default="" Mode="" Description="Password needed by users to join server" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Ban IP Adresses" Target="Ban" Default="" Mode="" Description="Comma delimited list of banned IP addresses" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Message of the day" Target="MOTD" Default="Have Fun!!" Mode="" Description="Message shown to users on joining game" Type="Variable" Display="advanced" Required="false" Mask="false">Have Fun!!</Config>
+  <Config Name="Selected Startup Map" Target="MAP" Default="" Mode="" Description="Hash ID of selected startup map" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Advertise Online" Target="AdvertiseOnline" Default="True" Mode="" Description="Advertise server on openRA public servers" Type="Variable" Display="advanced" Required="false" Mask="false">True</Config>
+  <Config Name="Enable Single Player" Target="EnableSingleplayer" Default="False" Mode="" Description="Enable single players on server" Type="Variable" Display="advanced" Required="false" Mask="false">False</Config>
+</Container>

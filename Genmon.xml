@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Genmon</Name>
+  <Repository>m0ngr31/genmon</Repository>
+  <Registry>https://hub.docker.com/r/m0ngr31/genmon</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/m0ngr31/genmon/issues</Support>
+  <Project>https://github.com/jgyates/genmon</Project>
+  <Overview>Genmon&#xD;
+&#xD;
+&#xD;
+The Genmon project will monitor a backup generator that utilizes the Generac Controllers. This container is specifically made for compatibility with ESP32 devices.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://i.imgur.com/LqrD3CY.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>Donate to the Genmon author</DonateText>
+  <DonateLink>https://www.paypal.me/jgyates</DonateLink>
+  <Requires/>
+  <Config Name="Server Port" Target="8000" Default="8000" Mode="tcp" Description="Port that server listens on" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="App Config" Target="/etc/genmon" Default="/mnt/user/appdata/genmon" Mode="rw" Description="Container Path: /etc/genmon" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/genmon</Config>
+  <Config Name="TZ" Target="TZ" Default="America/New_York" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">America/New_York</Config>
+</Container>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>stable-diffusion</Name>
+  <Repository>nicklucche/stable-diffusion</Repository>
+  <Registry>https://hub.docker.com/r/nicklucche/stable-diffusion/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/nicklucche/stable-diffusion/</Support>
+  <Project/>
+  <Overview>GPU-ready Dockerfile to run the Stability.AI stable-diffusion model with a simple web interface</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:7860]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://stablediffusion.fr/sd.png</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1699396706</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="Port" Target="7860" Default="7860" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7860</Config>
+  <Config Name="Models" Target="/root/.cache/huggingface/diffusers" Default="/mnt/user/appdata/stablediffusion" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/stablediffusion</Config>
+</Container>

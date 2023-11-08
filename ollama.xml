@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ollama</Name>
+  <Repository>ollama/ollama</Repository>
+  <Registry>https://hub.docker.com/r/ollama/ollama/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/ollama/ollama/</Support>
+  <Project/>
+  <Overview>The easiest way to get up and running with large language models locally.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:11434]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://ollama.ai/public/ollama.png</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="Config" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Web Interface" Target="11434" Default="11434" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">11434</Config>
+</Container>

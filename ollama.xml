@@ -2,12 +2,12 @@
 <Container version="2">
   <Name>ollama</Name>
   <Repository>ollama/ollama</Repository>
-  <Registry>https://hub.docker.com/r/ollama/ollama/</Registry>
+  <Registry>https://hub.docker.com/r/ollama/ollama</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/ollama/ollama/</Support>
+  <Support>https://hub.docker.com/r/ollama/ollama</Support>
   <Project/>
   <Overview>The easiest way to get up and running with large language models locally.</Overview>
   <Category/>
@@ -24,4 +24,5 @@
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Config" Target="/root/.ollama" Default="/mnt/user/appdata/ollama" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Web Interface" Target="11434" Default="11434" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">11434</Config>
+  <Config Name="Origins" Target="OLLAMA_ORIGINS" Default="*" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">*</Config>
 </Container>

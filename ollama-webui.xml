@@ -7,13 +7,13 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/ollama-webui/ollama-webui/pkgs/container/ollama-webui</Support>
+  <Support>https://github.com/ollama-webui/ollama-webui/issues</Support>
   <Project/>
   <Overview>A User-Friendly Web Interface for Chat Interactions</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
-  <Icon>https://ollama.ai/public/ollama.png</Icon>
+  <Icon>https://avatars.githubusercontent.com/u/151674099?s=200&v=4</Icon>
   <PostArgs/>
   <CPUset/>
   <DonateText/>

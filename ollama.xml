@@ -2,18 +2,19 @@
 <Container version="2">
   <Name>ollama</Name>
   <Repository>ollama/ollama</Repository>
-  <Registry>https://hub.docker.com/r/ollama/ollama</Registry>
+  <Registry>https://hub.docker.com/r/ollama/ollama/</Registry>
   <Network>bridge</Network>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/ollama/ollama</Support>
-  <Project/>
+  <Support>https://discord.com/invite/ollama</Support>
+  <Project>https://ollama.ai</Project>
   <Overview>The easiest way to get up and running with large language models locally.</Overview>
-  <Category/>
+  <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:11434]/</WebUI>
   <TemplateURL/>
-  <Icon>https://avatars.githubusercontent.com/u/151674099?s=200&v=4</Icon>
+  <Icon>https://avatars.githubusercontent.com/u/151674099</Icon>
   <ExtraParams>--runtime=nvidia</ExtraParams>
   <PostArgs/>
   <CPUset/>

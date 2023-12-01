@@ -2,24 +2,24 @@
 <Container version="2">
   <Name>ComfyUI-Magic</Name>
   <Repository>futrlabsmagic/comfyui-magic</Repository>
-  <Registry>https://hub.docker.com/r/futrlabsmagic/comfyui-magic</Registry>
+  <Registry>https://hub.docker.com/r/futrlabsmagic/comfyui-magic/</Registry>
   <Network>bridge</Network>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/FUTRlabs/ComfyUI-Magic/issues</Support>
-  <Project/>
+  <Support>https://discord.gg/nusNSsrTuV</Support>
+  <Project>https://www.minethefutr.com</Project>
   <Overview>ComfyUI-Magic: &#x1F50B;Batteries&#x1F50B; included</Overview>
-  <Category/>
+  <Category>Productivity:Crypto:</Category>
   <WebUI>http://[IP]:[PORT:8188]/</WebUI>
   <TemplateURL/>
-  <Icon>https://avatars.githubusercontent.com/u/121283862?v=4</Icon>
+  <Icon>https://avatars.githubusercontent.com/u/121283862</Icon>
   <ExtraParams>--runtime=nvidia</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires/>
   <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Storage" Target="/storage" Default="/mnt/user/appdata/comfy-ui" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/comfy-ui</Config>

@@ -2,18 +2,18 @@
 <Container version="2">
   <Name>ollama-webui</Name>
   <Repository>ghcr.io/ollama-webui/ollama-webui:main</Repository>
-  <Registry>https://github.com/ollama-webui/ollama-webui/pkgs/container/ollama-webui</Registry>
+  <Registry>https://github.com/ollama-webui/ollama-webui/pkgs/container/ollama-webui/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/ollama-webui/ollama-webui/issues</Support>
-  <Project/>
+  <Project>https://github.com/ollama-webui/ollama-webui</Project>
   <Overview>A User-Friendly Web Interface for Chat Interactions</Overview>
-  <Category/>
+  <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
-  <Icon>https://avatars.githubusercontent.com/u/151674099?s=200&v=4</Icon>
+  <Icon>https://avatars.githubusercontent.com/u/151674099</Icon>
   <PostArgs/>
   <CPUset/>
   <DonateText/>

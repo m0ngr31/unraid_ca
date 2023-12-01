@@ -11,7 +11,7 @@
   <Support>https://discord.gg/nusNSsrTuV</Support>
   <Project>https://www.minethefutr.com</Project>
   <Overview>ComfyUI-Magic: &#x1F50B;Batteries&#x1F50B; included</Overview>
-  <Category>Productivity:Crypto:</Category>
+  <Category>Crypto:Productivity:MediaApp:Photos</Category>
   <WebUI>http://[IP]:[PORT:8188]/</WebUI>
   <TemplateURL/>
   <Icon>https://avatars.githubusercontent.com/u/121283862</Icon>
@@ -24,5 +24,6 @@
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Storage" Target="/storage" Default="/mnt/user/appdata/comfy-ui" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/comfy-ui</Config>
   <Config Name="Web Interface" Target="8188" Default="8188" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8188</Config>
-  <Config Name="AUTOACCEPT" Target="AUTOACCEPT" Default="yes" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+  <Config Name="Supplier ID" Target="SUPPLIER_ID" Default="" Mode="" Description="Sign up at: https://www.minethefutr.com" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Auto-Accept Terms" Target="AUTOACCEPT" Default="yes" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
 </Container>

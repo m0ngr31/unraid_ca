@@ -13,7 +13,7 @@
 &#xD;
 &#xD;
 The Genmon project will monitor a backup generator that utilizes the Generac Controllers. This container is specifically made for compatibility with ESP32 devices.</Overview>
-  <Category/>
+  <Category>Home Automation</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <TemplateURL/>
   <Icon>https://i.imgur.com/LqrD3CY.png</Icon>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Refact</Name>
+  <Repository>smallcloud/refact_self_hosting</Repository>
+  <Registry>https://hub.docker.com/r/smallcloud/refact_self_hosting/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://www.smallcloud.ai/discord</Support>
+  <Project>https://refact.ai</Project>
+  <Overview>Refact WebUI for fine-tuning and self-hosting of code models, that you can later use inside Refact plugins for code completion and chat.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8008]/</WebUI>
+  <Icon>https://i.imgur.com/Q6SEUki.png</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
+  <Config Name="Storage" Target="/perm_storage" Default="/mnt/user/appdata/refact" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/refact</Config>
+  <Config Name="Interface" Target="8008" Default="8008" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8008</Config>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+</Container>

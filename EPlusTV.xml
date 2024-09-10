@@ -96,4 +96,5 @@
   <Config Name="MSG+ Username" Target="MSGPLUS_USER" Default="" Mode="" Description="MSG+ Username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MSG+ Password" Target="MSGPLUS_PASS" Default="" Mode="" Description="MSG+ Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use FloSports?" Target="FLOSPORTS" Default="" Mode="" Description="Use if you would like to login with FloSports" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Use Mountain West?" Target="MTNWEST" Default="" Mode="" Description="Use if you would like Mountain West events" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>

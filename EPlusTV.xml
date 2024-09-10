@@ -87,6 +87,8 @@
   <Config Name="CBS SportsHQ" Target="CBSSPORTSHQ" Default="" Mode="" Description="Set if you would like the CBS Sports HQ channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Golazo Network?" Target="GOLAZO" Default="" Mode="" Description="Set if you would like the Golazo Network channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use NFL+?" Target="NFLPLUS" Default="" Mode="" Description="Set if you would like NFL+ events" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="NFL Network" Target="NFLNETWORK" Default="" Mode="" Description="Set if you would like the NFL Network channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="NFL RedZone" Target="NFLREDZONE" Default="" Mode="" Description="Set if you would like NFL RedZone (have to have NFL+ Premium)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use B1G+?" Target="B1GPLUS" Default="" Mode="" Description="Set if you would like to use B1G+" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="B1G+ Username" Target="B1GPLUS_USER" Default="" Mode="" Description="B1G+ Username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="B1G+ Password" Target="B1GPLUS_PASS" Default="" Mode="" Description="B1G+ Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>

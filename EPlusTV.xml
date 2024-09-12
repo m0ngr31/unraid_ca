@@ -83,6 +83,7 @@
   <Config Name="Only scheduled FOX 4K?" Target="FOX_ONLY_4K" Default="" Mode="" Description="Only get 4K events from FOX" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use MLB.tv?" Target="MLBTV" Default="" Mode="" Description="Set if you would like to use MLB.tv" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Only free MLB.tv games?" Target="MLBTV_ONLY_FREE" Default="" Mode="" Description="Only schedule free games?" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Big Inning?" Target="BIGINNING" Default="" Mode="" Description="Schedule Big Inning?" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Use Parmount+?" Target="PARAMOUNTPLUS" Default="" Mode="" Description="Set if you would like CBS Sports events" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="CBS SportsHQ" Target="CBSSPORTSHQ" Default="" Mode="" Description="Set if you would like the CBS Sports HQ channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Golazo Network?" Target="GOLAZO" Default="" Mode="" Description="Set if you would like the Golazo Network channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>

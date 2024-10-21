@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version="4">
   <Name>EPlusTV</Name>
   <Repository>m0ngr31/eplustv</Repository>
   <Registry>https://hub.docker.com/r/m0ngr31/eplustv/</Registry>
@@ -9,21 +9,21 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/m0ngr31/EPlusTV/issues</Support>
   <Project/>
-  <Overview>This takes ESPN, ESPN+, FOX Sports, Paramount+, MSG+, NFL+, B1G+, FloSports, or MLB.tv programming and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or ChannelsDVR.&#xD;
+  <Overview>This takes ESPN, ESPN+, FOX Sports, Paramount+, MSG+, NFL+, B1G+, NESN, Mountain West, FloSports, CBS Sports, or MLB.tv programming and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or ChannelsDVR.&#xD;
 &#xD;
 === Notes ===&#xD;
  * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN, FOX Sports, and MLB.tv apps currently provide.&#xD;
  * The Mouse might not like it and it could be taken down at any minute. Enjoy it while it lasts. &#xAF;\\(&#x30C4;)/&#xAF;&#xD;
 </Overview>
   <Category>MediaApp:Video</Category>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <TemplateURL/>
   <Icon>https://i.imgur.com/LrdVje2.png</Icon>
   <PostArgs/>
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>This takes ESPN, ESPN+, FOX Sports, Paramount+, MSG+, NFL+, B1G+, FloSports, or MLB.tv programming and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or ChannelsDVR.&#xD;
+  <Description>This takes ESPN, ESPN+, FOX Sports, Paramount+, MSG+, NFL+, B1G+, NESN, Mountain West, FloSports, CBS Sports, or MLB.tv and transforms it into a "live TV" experience with virtual linear channels. It will discover what is on, and generate a schedule of channels that will give you M3U and XMLTV files that you can import into something like Jellyfin or ChannelsDVR.&#xD;
 &#xD;
 === Notes ===&#xD;
  * This was not made for pirating streams. This is made for using your own credentials and have a different presentation than the ESPN FOX Sports, and MLB.tv apps currently provide.&#xD;
@@ -66,36 +66,6 @@
   <Config Name="Start Channel" Target="START_CHANNEL" Default="1" Mode="" Description="If nothing is input, it will default to Channel 1." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
   <Config Name="Number of Channels" Target="NUM_OF_CHANNELS" Default="200" Mode="" Description="How many channels to create? This is dependent on the networks you are using. A good number to start with is > 200 if you are using ESPN+." Type="Variable" Display="always" Required="false" Mask="false">200</Config>
   <Config Name="Dedicated Linear Channels?" Target="LINEAR_CHANNELS" Default="" Mode="" Description="Break out dedicated linear channels" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Base URL" Target="BASE_URL" Default="" Mode="" Description=" 	If using a reverse proxy, m3u will be generated with this uri base." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Proxy Segments?" Target="PROXY_SEGMENTS" Default="" Mode="" Description="Proxy keyed `*.ts` files" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ESPN+?" Target="ESPNPLUS" Default="true" Mode="" Description="Set to false if you only want events that come from your TV provider" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Use ESPN?" Target="ESPN" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ESPN2?" Target="ESPN2" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ESPN3?" Target="ESPN3" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ESPNU?" Target="ESPNU" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use SEC Network?" Target="SEC" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use SEC Network+?" Target="SECPLUS" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ACCN?" Target="ACCN" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ACCNX?" Target="ACCNX" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ESPNEWS?" Target="ESPNEWS" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use ESPN PPV?" Target="ESPN_PPV" Default="" Mode="" Description="Set if you have purchased PPV events" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use FOX Sports?" Target="FOXSPORTS" Default="" Mode="" Description="Set if your TV provider supports it" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Max FOX Stream Resolution" Target="MAX_RESOLUTION" Default="UHD/SDR" Mode="" Description="Max resolution to use. Only for FOX events. Valid options are `UHD/HDR`, `UHD/SDR`, and `720p` (Some events don't offer 4K and will attempt to play the highest framerate available for selected resolution)" Type="Variable" Display="always" Required="false" Mask="false">UHD/SDR</Config>
-  <Config Name="Only scheduled FOX 4K?" Target="FOX_ONLY_4K" Default="" Mode="" Description="Only get 4K events from FOX" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use MLB.tv?" Target="MLBTV" Default="" Mode="" Description="Set if you would like to use MLB.tv" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Only free MLB.tv games?" Target="MLBTV_ONLY_FREE" Default="" Mode="" Description="Only schedule free games?" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Big Inning?" Target="BIGINNING" Default="" Mode="" Description="Schedule Big Inning?" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use Parmount+?" Target="PARAMOUNTPLUS" Default="" Mode="" Description="Set if you would like CBS Sports events" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="CBS SportsHQ" Target="CBSSPORTSHQ" Default="" Mode="" Description="Set if you would like the CBS Sports HQ channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Golazo Network?" Target="GOLAZO" Default="" Mode="" Description="Set if you would like the Golazo Network channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use NFL+?" Target="NFLPLUS" Default="" Mode="" Description="Set if you would like NFL+ events" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="NFL Network" Target="NFLNETWORK" Default="" Mode="" Description="Set if you would like the NFL Network channel (only available with LINEAR_CHANNELS)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="NFL RedZone" Target="NFLREDZONE" Default="" Mode="" Description="Set if you would like NFL RedZone (have to have NFL+ Premium)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use B1G+?" Target="B1GPLUS" Default="" Mode="" Description="Set if you would like to use B1G+" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="B1G+ Username" Target="B1GPLUS_USER" Default="" Mode="" Description="B1G+ Username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="B1G+ Password" Target="B1GPLUS_PASS" Default="" Mode="" Description="B1G+ Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use MSG+?" Target="MSGPLUS" Default="" Mode="" Description="Set if you would like to use MSG+" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="MSG+ Username" Target="MSGPLUS_USER" Default="" Mode="" Description="MSG+ Username" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="MSG+ Password" Target="MSGPLUS_PASS" Default="" Mode="" Description="MSG+ Password" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use FloSports?" Target="FLOSPORTS" Default="" Mode="" Description="Use if you would like to login with FloSports" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Use Mountain West?" Target="MTNWEST" Default="" Mode="" Description="Use if you would like Mountain West events" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>

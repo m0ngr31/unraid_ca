@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>vLLM</Name>
+  <Repository>vllm/vllm-openai</Repository>
+  <Registry>https://hub.docker.com/r/vllm/vllm-openai</Registry>
+  <Network>bridge</Network>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.gg/jz7wjKhh6g</Support>
+  <Project>https://docs.vllm.ai/</Project>
+  <Overview>Easy, fast, and cheap LLM serving for everyone</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://i.imgur.com/oQcntuY.png</Icon>
+  <ExtraParams>--runtime=nvidia --ipc=host</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="Model Storage" Target="/root/.cache/huggingface" Default="/mnt/user/appdata/vllm" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/vllm</Config>
+  <Config Name="Port" Target="8000" Default="8000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8000</Config>
+  <Config Name="Hugging Face Token" Target="HUGGING_FACE_HUB_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+</Container>

@@ -11,7 +11,7 @@
   <Support>https://discord.gg/jz7wjKhh6g</Support>
   <Project>https://docs.vllm.ai/</Project>
   <Overview>Easy, fast, and cheap LLM serving for everyone</Overview>
-  <Category>Productivity:</Category>
+  <Category>AI:</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <TemplateURL/>
   <Icon>https://i.imgur.com/oQcntuY.png</Icon>

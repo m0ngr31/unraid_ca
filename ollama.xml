@@ -11,7 +11,7 @@
   <Support>https://discord.com/invite/ollama</Support>
   <Project>https://ollama.ai</Project>
   <Overview>The easiest way to get up and running with large language models locally.</Overview>
-  <Category>Productivity:</Category>
+  <Category>AI:</Category>
   <WebUI>http://[IP]:[PORT:11434]/</WebUI>
   <TemplateURL/>
   <Icon>https://avatars.githubusercontent.com/u/151674099</Icon>

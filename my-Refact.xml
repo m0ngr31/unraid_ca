@@ -10,7 +10,7 @@
   <Support>https://www.smallcloud.ai/discord</Support>
   <Project>https://refact.ai</Project>
   <Overview>Refact WebUI for fine-tuning and self-hosting of code models, that you can later use inside Refact plugins for code completion and chat.</Overview>
-  <Category>Productivity:</Category>
+  <Category>AI:</Category>
   <WebUI>http://[IP]:[PORT:8008]/</WebUI>
   <Icon>https://i.imgur.com/Q6SEUki.png</Icon>
   <ExtraParams>--runtime=nvidia</ExtraParams>

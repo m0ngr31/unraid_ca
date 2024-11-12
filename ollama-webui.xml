@@ -10,7 +10,7 @@
   <Support>https://github.com/ollama-webui/ollama-webui/issues</Support>
   <Project>https://github.com/ollama-webui/ollama-webui</Project>
   <Overview>A User-Friendly Web Interface for Chat Interactions</Overview>
-  <Category>Productivity:</Category>
+  <Category>AI:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
   <Icon>https://avatars.githubusercontent.com/u/151674099</Icon>

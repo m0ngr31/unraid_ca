@@ -10,7 +10,7 @@
   <Support>https://join.slack.com/t/tabbycommunity/shared_invite/zt-1xeiddizp-bciR2RtFTaJ37RBxr8VxpA</Support>
   <Project>https://tabby.tabbyml.com/</Project>
   <Overview>Opensource, self-hosted AI coding assistant</Overview>
-  <Category>Productivity:</Category>
+  <Category>AI:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <Icon>https://i.imgur.com/95GUyHf.png</Icon>
   <ExtraParams>--runtime=nvidia</ExtraParams>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ComfyUI</Name>
+  <Repository>ghcr.io/ai-dock/comfyui:latest-cuda</Repository>
+  <Registry>https://github.com/ai-dock/comfyui/pkgs/container/comfyui</Registry>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8188</HostPort>
+        <ContainerPort>8188</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/ai-dock/comfyui/issues</Support>
+  <Project/>
+  <Overview/>
+  <Category>AI:</Category>
+  <WebUI>http://[IP]:[PORT:8188]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/121283862?v=4</Icon>
+  <ExtraParams>--runtime=nvidia</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="AUTO_UPDATE" Target="AUTO_UPDATE" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="HF_TOKEN" Target="HF_TOKEN" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="COMFYUI_PORT_HOST" Target="COMFYUI_PORT_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="PROVISIONING_SCRIPT" Target="PROVISIONING_SCRIPT" Default="https://gist.githubusercontent.com/m0ngr31/8034da798640a7f0d338291d5bf52baa/raw/5739053fd08f4756b3889b3639e021d31d40a96f/comfyui-provision.sh" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">https://gist.githubusercontent.com/m0ngr31/8034da798640a7f0d338291d5bf52baa/raw/5739053fd08f4756b3889b3639e021d31d40a96f/comfyui-provision.sh</Config>
+  <Config Name="Config" Target="/workspace" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/comfy-ui/config</Config>
+  <Config Name="Storage" Target="/opt/storage" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/comfy-ui/storage</Config>
+  <Config Name="Web Interface" Target="8188" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8188</Config>
+  <Config Name="COMFYUI_FLAGS" Target="COMFYUI_FLAGS" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="WEB_ENABLE_AUTH" Target="WEB_ENABLE_AUTH" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+</Container>

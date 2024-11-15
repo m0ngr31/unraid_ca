@@ -3,7 +3,16 @@
   <Name>vLLM</Name>
   <Repository>vllm/vllm-openai</Repository>
   <Registry>https://hub.docker.com/r/vllm/vllm-openai</Registry>
-  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
   <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
   <MyIP/>
   <Shell>sh</Shell>
@@ -20,7 +29,6 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Requires/>
   <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="all" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Model Storage" Target="/root/.cache/huggingface" Default="/mnt/user/appdata/vllm" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/vllm</Config>

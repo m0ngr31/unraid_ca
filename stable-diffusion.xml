@@ -10,7 +10,7 @@
   <Support>https://github.com/NickLucche/stable-diffusion-nvidia-docker/issues</Support>
   <Project/>
   <Overview>GPU-ready Dockerfile to run the Stability.AI stable-diffusion model with a simple web interface</Overview>
-  <Category>AI:MediaApp:Photos</Category>
+  <Category>AI:</Category>
   <WebUI>http://[IP]:[PORT:7860]/</WebUI>
   <TemplateURL/>
   <Icon>https://stablediffusion.fr/sd.png</Icon>
